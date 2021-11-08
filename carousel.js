@@ -21,6 +21,8 @@
 
     next.addEventListener("click", moveNext);
     prev.addEventListener("click", movePrev);
+
+    console.log("set event listeners working")
   }
 
   function moveNext() {
@@ -33,6 +35,8 @@
 
       moveCarouselTo(slide)
     }
+
+    console.log("move next working")
   }
 
   function movePrev() {
@@ -89,6 +93,8 @@
         items[newNext].className = itemClassName + " next"
       }
     }
+
+    console.log("move carousel to working")
   }
 
   function initCarousel() {
