@@ -19,7 +19,38 @@
 
     next.addEventListener("click", moveNext);
     prev.addEventListener("click", movePrev);
+  }
 
+  function moveNext() {
+    if (!moving) {
+      if (slide === (totalItems - 1)) {
+        slide = 0;
+      } else {
+        slide++;
+      }
+
+      moveCarouselTo(slide)
+    }
+  }
+
+  function movePrev() {
+    if (!moving) {
+      if (slide === 0) {
+        slide = (totalItems - 1);
+      } else {
+        slide--;
+      }
+
+      moveCarouselTo(slide);
+    }
+  }
+
+  function disableInteraction() {
+    moving = true;
+
+    setTimeout(function() {
+      moving = false
+    }, 500);
   }
 
 }(document);
